@@ -26,6 +26,7 @@ export class WeatherDashboardComponent implements OnInit {
   faSeacrh = faSearchLocation;
   public chart: any;
   lineChart: any;
+  date : any
   hourlyTemperatureData: any[];
   city: string
   cityName: any
@@ -52,7 +53,7 @@ export class WeatherDashboardComponent implements OnInit {
   constructor(private api: WeatherServiceService) {}
 
   ngOnInit(): void {
-
+    this.date = new Date
   }
 
   fetchHourlyWeatherData(): void {
