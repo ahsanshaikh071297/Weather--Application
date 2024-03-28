@@ -1,0 +1,13 @@
+.bg-image {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+img {
+    width: 200px;
+    /* mix-blend-mode: multiply; */
+}
+

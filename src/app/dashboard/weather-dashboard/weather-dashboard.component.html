@@ -1,0 +1,95 @@
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 ">
+            <!-- Sidebar content goes here -->
+            <div class="sidebar">
+                <div class="main">
+                    <h3><img src="assets/3d-map.png" alt=""> {{cityName}}, {{country}}</h3>
+                    <p>Today, 25 Mar 2024</p>
+                    <img [src]="getBackgroundImageUrl()" alt="" width="200px"
+                        style="padding-top: 20px; padding-left: 25px;">
+                    <div style="font-size: 40px; padding-left: 55px; padding-top: 10px;">
+                        {{temperature}}°C
+                    </div>
+                    <div style="font-size: 14px; padding-left: 55px;">
+                        <span>Feels like {{feels_like}}</span> <br>
+                    </div>
+                    <div style="font-size: 14px; padding-left: 45px;">
+                        <span class="">Min : <span>{{minTemperature}}</span></span>
+                        <span class="mx-2">|</span>
+                        <span class="">Max: <span>{{maxTemperature}}</span></span>
+                    </div>
+
+
+
+                </div>
+                <br>
+                <div class="info">
+                    <div class="humidity">Humidity :</div>
+                    <div class="value">{{humidity}}%</div>
+                </div>
+                <div class="info">
+                    <div class="humidity">Pressure :</div>
+                    <div class="value">{{pressure}}</div>
+                </div>
+                <div class="info">
+                    <div class="humidity">Wind :</div>
+                    <div class="value">{{wind}} km/h</div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Content -->
+        <div class="col-md-9">
+            <!-- Main content goes here -->
+            <div class="heading" style="margin-top: 25px;">
+                <div>
+                    <h4>Weather Forecast Dashboard</h4>
+                    <p>Check out today's weather information</p>
+                </div>
+                <div class="search">
+                    <input type="text" class="searchTerm" placeholder="Search city..." [(ngModel)]="city">
+                    <button type="submit" class="searchButton" (click)="getCityDetails(city)">
+                        <fa-icon [icon]="faSeacrh"></fa-icon>
+                    </button>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    <strong>Upcoming hours</strong>
+                    <div style="height: 350 !important; width: 800 !important;">
+                        <div style="padding-left: 40%;" >
+                            <img src="assets/location-not-found-7469034-6136211.webp" alt="" style="width: 140px; height: 140px;">
+                            <p >Sorry !! Not found</p>
+                        </div>
+                        <canvas id="MyChart">{{ chart }}</canvas>
+                        
+
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row container" *ngIf="forecastDataByDay">
+                <div class="card" *ngFor="let day of forecastDataByDay" style="margin-right: 15px;">
+                    <div class="imgBx">
+                        <img [src]="getWeatherIconClass(day.weatherIcon)" style="width: 80px; height: 80px;">
+                    </div>
+                    <div class="contentBx">
+                        <h5>{{ getDayOfWeek(day.date) }}</h5>
+                        <h5>{{ day.temperature }}°C</h5>
+                        <!-- <div class="size"> -->
+                        <span>{{ day.weatherDescription }}</span>
+                        <!-- </div> -->
+                        <!-- <div class="color">
+                      <h3>Color :</h3>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
