@@ -19,7 +19,7 @@ Weather Icons: Displays weather icons corresponding to the current weather condi
 # Technologies Used
 Angular: Frontend development framework used to build the web application.
 
-RapidAPI: Weather API used to fetch current weather data and forecasts.
+OpenWeatherMap: Weather API used to fetch current weather data and forecasts.
 
 Chart.js: JavaScript library used for creating interactive and customizable charts for temperature trends.
 
