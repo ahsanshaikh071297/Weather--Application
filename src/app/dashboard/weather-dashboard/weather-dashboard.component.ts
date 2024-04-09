@@ -235,9 +235,9 @@ export class WeatherDashboardComponent implements OnInit {
       case '02n':
         return "assets/moon.png";
       case '03d':
-        return "assets/cloud s.png";
+        return "assets/cloudsScattered.png";
       case '03n':
-        return "assets/cloud s.png";
+        return "assets/cloudsScattered.png";
       case '04d':
         return "assets/weather.png";
       case '04n':

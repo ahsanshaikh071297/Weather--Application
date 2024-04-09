@@ -25,6 +25,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@types/chart.js": "^2.9.41",
     "chart.js": "^4.4.2",
+    "ngx-ui-loader": "^13.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

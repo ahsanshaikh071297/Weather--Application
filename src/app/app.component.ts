@@ -5,6 +5,7 @@ import { WeatherServiceService } from 'src/services/weather-service.service';
 import 'chart.js';
 import { ChartOptions, LinearScale, TimeScale } from 'chart.js';
 import Chart from 'chart.js/auto';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 
 interface ForecastByDay {
   date: string;
@@ -44,7 +45,7 @@ export class AppComponent implements OnInit {
   mapUrl: string;
   public chart: any;
 
-  constructor(private api: WeatherServiceService) {
+  constructor(private api: WeatherServiceService, private ngxService: NgxUiLoaderService) {
     const apiKey = '49dd824433e8dc17f2ff6d8bf2fd0ac4'; // Replace with your OpenWeatherMap API key
     const layer = 'clouds_new';
     const zoom = 10;
