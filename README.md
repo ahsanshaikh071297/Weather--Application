@@ -5,6 +5,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 # Overview
 This project is a Weather Forecast web application that provides current weather statistics for a searched city, as well as a graphical representation of temperature trends using Chart.js. It also offers a 5-day forecast to help users plan ahead. The application fetches weather data from the OpenWeatherMap weather API.
 
+# Demo
+Download to watch video
+
+https://github.com/ahsanshaikh071297/Weather--Application/blob/master/src/demo/weather%20forecast%20demo.mp4
+
 # Features
 Current Weather Stats: Users can search for a city and view current weather statistics, including temperature, humidity, wind speed, etc.
 
